@@ -10,6 +10,7 @@ import org.openqa.selenium.Keys;
 import java.io.File;
 
 import static com.codeborne.selenide.Condition.*;
+import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
 public class FormTest {
@@ -30,17 +31,17 @@ public class FormTest {
         $("#userNumber").setValue("8983478737");
 
 //        Просто напечатать дату
-        $("#dateOfBirthInput").doubleClick();
-        $("#dateOfBirthInput").sendKeys(Keys.CONTROL+"a");
-        $("#dateOfBirthInput").sendKeys(Keys.SPACE);
-        $("#dateOfBirthInput").setValue("19 Sep 1990");
-        $("#dateOfBirthInput").sendKeys(Keys.ESCAPE);
+//        $("#dateOfBirthInput").doubleClick();
+//        $("#dateOfBirthInput").sendKeys(Keys.CONTROL+"a");
+//        $("#dateOfBirthInput").sendKeys(Keys.SPACE);
+//        $("#dateOfBirthInput").setValue("19 Sep 1990");
+//        $("#dateOfBirthInput").sendKeys(Keys.ESCAPE);
 
 //        Накликать на пикере - не накликивается
-//        $("[class=react-datepicker__navigation react-datepicker__navigation--previous]").click();
-//        $("[class=react-datepicker__year-select]").selectOption("1990");
-//        $("[class=react-datepicker__month]").execute(pickDate);
-//        $("[id=dateOfBirthInput]").shouldHave(text("19 Sep 1990"));
+        $("#dateOfBirthInput").click();
+        $(".react-datepicker__month-select").selectOption("September");
+        $(".react-datepicker__year-select").selectOption("1990");
+        $(".react-datepicker__day--019:not(.react-datepicker__day--outside-month)").click();
 
 
 //        Автосаджест форма
@@ -55,7 +56,7 @@ public class FormTest {
 
 
 //        Прикрепить файл - не прикрепляется
-//        $("[id=uploadPicture]").click();
+        $("#uploadPicture").uploadFile(new File("src/test/java/galja_johny/testimgk.png"));
 //        File file = new File("testimgk.png");
 //        $("#file").uploadFile(file);
 //        $("[id=uploadPicture]").uploadFile("C:\Users\galja\Downloads\Image from iOS (6).png");
@@ -67,20 +68,19 @@ public class FormTest {
 //        Списки
         $("#state").scrollIntoView(true).click();
         $("#react-select-3-input").pressEnter();
+//        $("#stateCity-wrapper").$(byText("Haryana")).click();         тоже самое, только кликаем на текст в открывшемся списке
         $("#city").click();
         $("#react-select-4-input").pressEnter();
+        
 
-//        Кнопка
-        $("#submit").doubleClick();
-
-//        Проверки
+//        Проверки, что всё заполнилось
         $("#firstName").shouldBe(value("John"));
         $("#lastName").shouldHave(value("Doe"));
         $("#userEmail").shouldHave(value("correct@email.com"));
         $("#gender-radio-3").isSelected();
         $("#userNumber").shouldHave(value("8983478737"));
         $("#dateOfBirthInput").shouldHave(value("19 Sep 1990"));
-        $("#subjectsInput").shouldHave(value("Hindi"));
+//        $("#subjectsInput").shouldHave(value("Hindi"));  не работает проверка
         $("#hobbies-checkbox-1").isSelected();
         $("#hobbies-checkbox-2").isSelected();
         $("#hobbies-checkbox-3").isSelected();
@@ -88,10 +88,26 @@ public class FormTest {
         $("#react-select-3-input").isSelected();
         $("#react-select-4-input").isSelected();
 
+//        Кнопка
+        $("#submit").click();
+
+
+//        Проверки результата
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+        $(".table-responsive").shouldHave(text("John Doe"),text("correct@email.com"),
+        text("Other"), text("8983478737"), text("19 September,1990"), text("Hindi"),
+                text("Sports, Reading, Music"), text("Sports, Reading, Music"),
+                text("Brighton main square"), text("NCR Delhi"));
+
+
 
 
 
     }
 
 }
+
+
+
+
 
