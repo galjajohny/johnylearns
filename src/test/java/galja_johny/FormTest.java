@@ -37,7 +37,7 @@ public class FormTest {
 //        $("#dateOfBirthInput").setValue("19 Sep 1990");
 //        $("#dateOfBirthInput").sendKeys(Keys.ESCAPE);
 
-//        Накликать на пикере - не накликивается
+//        Накликать на пикере
         $("#dateOfBirthInput").click();
         $(".react-datepicker__month-select").selectOption("September");
         $(".react-datepicker__year-select").selectOption("1990");
@@ -57,9 +57,6 @@ public class FormTest {
 
 //        Прикрепить файл - не прикрепляется
         $("#uploadPicture").uploadFile(new File("src/test/java/galja_johny/testimgk.png"));
-//        File file = new File("testimgk.png");
-//        $("#file").uploadFile(file);
-//        $("[id=uploadPicture]").uploadFile("C:\Users\galja\Downloads\Image from iOS (6).png");
 
 
 //        Адрес
@@ -71,7 +68,7 @@ public class FormTest {
 //        $("#stateCity-wrapper").$(byText("Haryana")).click();         тоже самое, только кликаем на текст в открывшемся списке
         $("#city").click();
         $("#react-select-4-input").pressEnter();
-        
+
 
 //        Проверки, что всё заполнилось
         $("#firstName").shouldBe(value("John"));
