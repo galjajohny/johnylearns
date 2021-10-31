@@ -70,17 +70,15 @@ public class FormTest {
         $("#city").click();
         $("#react-select-4-input").pressEnter();
 
-//        Кнопка
-        $("#submit").doubleClick();
 
-//        Проверки
+//        Проверки, что всё заполнилось
         $("#firstName").shouldBe(value("John"));
         $("#lastName").shouldHave(value("Doe"));
         $("#userEmail").shouldHave(value("correct@email.com"));
         $("#gender-radio-3").isSelected();
         $("#userNumber").shouldHave(value("8983478737"));
         $("#dateOfBirthInput").shouldHave(value("19 Sep 1990"));
-        $("#subjectsInput").shouldHave(value("Hindi"));
+//        $("#subjectsInput").shouldHave(value("Hindi"));  не работает проверка
         $("#hobbies-checkbox-1").isSelected();
         $("#hobbies-checkbox-2").isSelected();
         $("#hobbies-checkbox-3").isSelected();
@@ -88,10 +86,26 @@ public class FormTest {
         $("#react-select-3-input").isSelected();
         $("#react-select-4-input").isSelected();
 
+//        Кнопка
+        $("#submit").click();
+
+
+//        Проверки результата
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+        $(".table-responsive").shouldHave(text("John Doe"),text("correct@email.com"),
+        text("Other"), text("8983478737"), text("19 September,1990"), text("Hindi"),
+                text("Sports, Reading, Music"), text("Sports, Reading, Music"),
+                text("Brighton main square"), text("NCR Delhi"));
+
+
 
 
 
     }
 
 }
+
+
+
+
 
