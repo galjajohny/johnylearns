@@ -56,7 +56,7 @@ public class FormTest {
 
 
 //        Прикрепить файл - не прикрепляется
-        $("#uploadPicture").uploadFile(new File("src/test/java/galja_johny/testimgk.png"));
+        $("#uploadPicture").uploadFile(new File("src/test/java/resources/testimage.jpg"));
 
 
 //        Адрес
