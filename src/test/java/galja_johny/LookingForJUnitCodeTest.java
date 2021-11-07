@@ -9,13 +9,7 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class LookingForJUnitCodeTest {
-
-    @BeforeEach
-    public void setup() {
-        Configuration.browser = "chrome";
-        Configuration.startMaximized = true;
-    }
+public class LookingForJUnitCodeTest extends TestBase{
 
     @Test
     void successfulFilling() {

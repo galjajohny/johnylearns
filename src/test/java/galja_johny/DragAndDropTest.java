@@ -8,13 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class DragAndDropTest {
-
-    @BeforeEach
-    public void setup() {
-        Configuration.browser = "chrome";
-        Configuration.startMaximized = true;
-    }
+public class DragAndDropTest extends TestBase{
 
     @Test
     void successfulMoving() {

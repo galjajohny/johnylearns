@@ -13,13 +13,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
-public class FormTest {
-
-    @BeforeEach
-    public void setup() {
-        Configuration.browser = "chrome";
-        Configuration.startMaximized = true;
-    }
+public class FormTest extends TestBase{
 
     @Test
     void successfulFilling() {
