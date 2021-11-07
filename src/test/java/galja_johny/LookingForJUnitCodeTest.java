@@ -23,7 +23,8 @@ public class LookingForJUnitCodeTest {
 
         $("#wiki-tab").click();
         $(byText("Soft assertions")).shouldBe(visible);
-        $$(".markdown-body ul li").get(6).$("a").click();
+//        $$(".markdown-body ul li").get(6).$("a").click();
+        $(".markdown-body").$(byText("Soft assertions")).click();
         $$(".markdown-body ol").get(3).$("li").shouldHave(text("Using JUnit5 extend test class:"));
         $$(".markdown-body ol").get(3).sibling(0).$("div pre").$(".pl-smi").shouldHave(text("SoftAssertsExtension"));
 
