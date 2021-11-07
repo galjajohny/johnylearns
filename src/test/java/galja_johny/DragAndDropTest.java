@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-public class DragandDropTest {
+public class DragAndDropTest {
 
     @BeforeEach
     public void setup() {
