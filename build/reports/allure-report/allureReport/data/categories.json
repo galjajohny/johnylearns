@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "element click intercepted: Element <div class=\" css-yt9ioa-option\" id=\"react-select-3-option-2\" tabindex=\"-1\">...</div> is not clickable at point (873, 889). Other element would receive the click: <iframe frameborder=\"0\" src=\"https://60260f6def70880180a4aec908166bf9.safeframe.googlesyndication.com/safeframe/1-0-38/html/container.html\" id=\"google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0\" title=\"3rd party ad content\" name=\"\" scrolling=\"no\" marginwidth=\"0\" marginheight=\"0\" width=\"728\" height=\"90\" data-is-safeframe=\"true\" sandbox=\"allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation\" allow=\"attribution-reporting\" role=\"region\" aria-label=\"Advertisement\" tabindex=\"0\" data-google-container-id=\"1\" style=\"border: 0px; vertical-align: bottom;\" data-load-complete=\"true\"></iframe>\n  (Session info: chrome=96.0.4664.45)\nBuild info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'\nSystem info: host: 'BIG-JOHNY', ip: '192.168.88.211', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_302'\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 96.0.4664.45, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\\Users\\galja\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53611}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 78faa0596f8fd79bc40c60bc32fee634",
+      "children" : [ {
+        "name" : "successfulFilling()",
+        "uid" : "3e8964ec2905a468",
+        "parentUid" : "19d68b4e8e3fbe696ace526572a4ad90",
+        "status" : "broken",
+        "time" : {
+          "start" : 1638475682903,
+          "stop" : 1638475687796,
+          "duration" : 4893
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "19d68b4e8e3fbe696ace526572a4ad90"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ],
+  "name" : "categories"
+}

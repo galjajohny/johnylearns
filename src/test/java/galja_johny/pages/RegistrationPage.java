@@ -31,14 +31,16 @@ public class RegistrationPage {
         $(".react-datepicker__year-select").selectOption(student.year);
         $(".react-datepicker__month-select").selectOption(student.month);
         $(".react-datepicker__month").findElement(byText(student.day)).click();
-        $("#subjectsInput").setValue(student.someInterest).pressEnter();
+        $("#subjectsInput").click();
+        $("#subjectsInput").setValue(student.someSubject).pressEnter();
         $("#hobbiesWrapper").find(byText(student.someInterest)).click();
         $("#uploadPicture").uploadFile(new File("src/test/resources/testimage.jpg"));
         $("#currentAddress").setValue(student.someAddress);
         $("#state").click();
-        $("#stateCity-wrapper").findElement(byText(student.state)).click();
+        $("#react-select-3-input").setValue(student.state).pressEnter();
         $("#city").click();
-        $("#stateCity-wrapper").findElement(byText(student.city)).click();
+        sleep(500);
+        $("#react-select-4-input").setValue(student.city).pressEnter();
         $("#submit").click();
 
 

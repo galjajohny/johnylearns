@@ -1,0 +1,22 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "galja_johny.tests.FormTestWithPageObjects",
+    "children" : [ {
+      "name" : "successfulFilling()",
+      "uid" : "3e8964ec2905a468",
+      "parentUid" : "bdb208d529bcf30826a75997b19dab49",
+      "status" : "broken",
+      "time" : {
+        "start" : 1638475682903,
+        "stop" : 1638475687796,
+        "duration" : 4893
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "bdb208d529bcf30826a75997b19dab49"
+  } ],
+  "name" : "suites"
+}
