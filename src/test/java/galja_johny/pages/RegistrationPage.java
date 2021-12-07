@@ -11,17 +11,14 @@ import static com.codeborne.selenide.Selenide.*;
 
 
 public class RegistrationPage {
-
     // actions
     public RegistrationPage openPage() {
         open("https://demoqa.com/automation-practice-form");
         $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
-
         return this;
     }
 
     public void fillForm(StudentRegistrationFormVM student) {
-
         $("#firstName").setValue(student.firstName);
         $("#lastName").setValue(student.lastName);
         $("#userEmail").setValue(student.email);
@@ -42,14 +39,9 @@ public class RegistrationPage {
         sleep(500);
         $("#react-select-4-input").setValue(student.city).pressEnter();
         $("#submit").click();
-
-
-
-
     }
 
     public void checkForm(StudentRegistrationFormVM student) {
-
         checkValue("Student Name", student.firstName + " " + student.lastName );
         checkValue("Gender", student.someGender );
         checkValue("Student Email", student.email);
@@ -59,19 +51,9 @@ public class RegistrationPage {
         checkValue("Hobbies", student.someInterest);
         checkValue("Address", student.someAddress);
         checkValue("State and City", student.state + " " + student.city );
-
-
-
     }
 
     private void checkValue(String key, String value) {
-
         $(".table-responsive").$(byText(key)).parent().shouldHave(text(value));
-
     }
-
-
-
-
-
 }
