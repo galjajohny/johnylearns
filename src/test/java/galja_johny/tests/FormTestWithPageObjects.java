@@ -1,7 +1,6 @@
 package galja_johny.tests;
 
 import com.codeborne.selenide.logevents.SelenideLogger;
-import io.qameta.allure.selenide.AllureSelenide;
 
 import com.github.javafaker.Faker;
 import galja_johny.model.StudentRegistrationFormVM;
@@ -13,7 +12,7 @@ public class FormTestWithPageObjects extends TestBase {
 
     @Test
     void successfulFilling() {
-        SelenideLogger.addListener("allure", new AllureSelenide());
+//        SelenideLogger.addListener("allure", new AllureSelenide());
         StudentRegistrationFormVM vasya = new StudentRegistrationFormVM();
         vasya.firstName = faker.name().firstName();
         vasya.lastName = faker.name().lastName();
