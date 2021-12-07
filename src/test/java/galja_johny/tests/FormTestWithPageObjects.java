@@ -1,7 +1,5 @@
 package galja_johny.tests;
 
-import com.codeborne.selenide.logevents.SelenideLogger;
-
 import com.github.javafaker.Faker;
 import galja_johny.model.StudentRegistrationFormVM;
 import org.junit.jupiter.api.Test;

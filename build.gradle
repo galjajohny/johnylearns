@@ -4,7 +4,8 @@ plugins {
 }
 
 def allureVersion = "2.16.1",
-    junitVersion = "5.8.1"
+    junitVersion = "5.8.1",
+    selenideVersion = "5.25.0"
 
 repositories {
     mavenCentral()
@@ -23,7 +24,8 @@ allure {
 
 dependencies {
     testImplementation (
-            "com.codeborne:selenide:5.25.0",
+            "com.codeborne:selenide:$selenideVersion",
+            "io.qameta.allure:allure-selenide:$allureVersion",
             "com.github.javafaker:javafaker:1.0.2",
             "org.assertj:assertj-core:3.19.0",
             "org.junit.jupiter:junit-jupiter:$junitVersion")
