@@ -10,9 +10,7 @@ public class DragAndDropTest extends TestBase {
 
     @Test
     void successfulMoving() {
-
         open("https://the-internet.herokuapp.com/drag_and_drop");
-
         $("#column-a").dragAndDropTo($("#column-b"));
         $("#column-a").shouldHave(text("B"));
         $("#column-b").shouldHave(text("A"));

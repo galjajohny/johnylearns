@@ -14,9 +14,7 @@ public class FormTestWithPageObjects extends TestBase {
     @Test
     void successfulFilling() {
         SelenideLogger.addListener("allure", new AllureSelenide());
-
         StudentRegistrationFormVM vasya = new StudentRegistrationFormVM();
-
         vasya.firstName = faker.name().firstName();
         vasya.lastName = faker.name().lastName();
         vasya.email = "asd@mjhg.ru";
@@ -31,16 +29,12 @@ public class FormTestWithPageObjects extends TestBase {
         vasya.city = "Karnal";
         vasya.state = "Haryana";
 
-
         regPage
                 .openPage()
                 .fillForm(vasya);
 
         regPage.checkForm(vasya);
-
-
     }
-
 }
 
 
