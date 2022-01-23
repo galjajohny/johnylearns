@@ -24,11 +24,11 @@ allure {
 
 dependencies {
     testImplementation (
-            "com.codeborne:selenide:$selenideVersion",
-            "io.qameta.allure:allure-selenide:$allureVersion",
-            "com.github.javafaker:javafaker:1.0.2",
-            "org.assertj:assertj-core:3.19.0",
-            "org.junit.jupiter:junit-jupiter:$junitVersion")
+            'com.codeborne:selenide:$selenideVersion',
+            'io.qameta.allure:allure-selenide:$allureVersion',
+            'com.github.javafaker:javafaker:1.0.2',
+            'org.assertj:assertj-core:3.19.0',
+            'org.junit.jupiter:junit-jupiter:$junitVersion')
 
     testRuntimeOnly (
             "org.junit.jupiter:junit-jupiter-engine:$junitVersion",
