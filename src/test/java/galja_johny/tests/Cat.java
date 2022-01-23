@@ -1,5 +1,6 @@
 package galja_johny.tests;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class Cat {
@@ -21,6 +22,7 @@ public class Cat {
 }
 
 class TestCat {
+    @Disabled
     @Test
     void test1() {
         Cat vasya = new Cat();
